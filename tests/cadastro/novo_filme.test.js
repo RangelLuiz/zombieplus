@@ -49,7 +49,7 @@ module.exports = {
         // Presente: verificar se o elemento está na página (em algum lugar)
 
         movie
-            .waitForElementPresent('@list', 5000)
+            .waitForElementPresent('@list', 10000)
             .assert.containsText('@list', movieData.title)
     }
 }
