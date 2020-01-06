@@ -32,14 +32,13 @@ module.exports = {
 
         movie.setValue('@searchInput', movieData.title)
         .click('@searchIcon')
-        .pause(10000)
     },
 
     'então o título buscado deve ser exibido na lista': function (browser) {
         let movie = browser.page.movie()
 
         movie 
-            .waitForElementPresent('@tr', 10000)
+            .waitForElementPresent('@tr', 20000)
             .expect.elements('@tr').count.to.equal(1) //finaliza o browser 
             
         movie.assert.containsText('@tr', movieData.title)
