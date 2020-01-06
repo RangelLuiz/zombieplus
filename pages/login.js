@@ -9,12 +9,12 @@ var loginActions = {
     },
     expectAlertDanger: function (texto) {
         return this
-            .waitForElementVisible('@alertDanger', 20000)
+            .waitForElementVisible('@alertDanger', 10000)
             .assert.containsText('@alertDanger', texto)
     },
     expectAlertInfo: function (texto) {
         return this
-            .waitForElementVisible('@alertInfo', 20000)
+            .waitForElementVisible('@alertInfo', 10000)
             .assert.containsText('@alertInfo', texto)
     }
 }
